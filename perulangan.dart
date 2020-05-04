@@ -45,6 +45,19 @@ void perulanganWhile() {
   }
 }
 
+void perulanganDoWhile() {
+  int i = 0;
+  do {
+    stdout.write("input? y/n: ");
+    String n = stdin.readLineSync();
+    if (n == "n") {
+      print("Melakukan perulangan sebanyak $i");
+      break;
+    }
+    i++;
+  } while (true);
+}
+
 main() {
-  perulanganWhile();
+  perulanganDoWhile();
 }
