@@ -58,6 +58,14 @@ void perulanganDoWhile() {
   } while (true);
 }
 
+void perulanganForEach() {
+  var names = ["Mia", "Ryujin", "Park Chorong", "Nayeon", "Suzy"];
+  for (var n in names) {
+    print(n);
+  }
+  print("Jumlah nama : ${names.length}");
+}
+
 main() {
-  perulanganDoWhile();
+  perulanganForEach();
 }
