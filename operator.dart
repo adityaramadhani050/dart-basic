@@ -42,9 +42,9 @@ main() {
   print("PROGRAM OPERATOR");
 
   stdout.write("Nilai a: ");
-  double a = double.parse(stdin.readLineSync());
+  double a = 10.0;
   stdout.write("Nilai b: ");
-  double b = double.parse(stdin.readLineSync());
+  double b = 2.0;
 
   double hasil;
 

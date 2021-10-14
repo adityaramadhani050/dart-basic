@@ -18,16 +18,18 @@ int namaFungsi(int param1, int param2){
 import 'dart:io';
 
 // membuat fungsi luas persegi
-int luasPersegi(int sisi) {
-  return sisi * sisi;
+int? luasPersegi(String? sisi) {
+  int? val = (sisi != null) ? int.tryParse(sisi) : null;
+  return (val != null) ? val * val : null;
 }
 
 main() {
   stdout.write("Input panjang sisi: ");
-  int s = int.parse(stdin.readLineSync());
+  String? input = stdin.readLineSync();
+
+  int? hasil = luasPersegi(input);
 
   // memanggil fungsi
-  int hasil = luasPersegi(s);
 
   print("Luas Persegi: $hasil");
 }
