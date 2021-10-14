@@ -18,8 +18,3 @@ class Music {
     }
   }
 }
-
-void main(List<String> args) {
-  Music music = Music(age: 28, gender: 'p');
-  print(music.musicRecommend());
-}
