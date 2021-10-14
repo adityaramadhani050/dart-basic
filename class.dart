@@ -1,23 +1,25 @@
 class Music {
-  String music_recommend;
+  final int age;
+  final String gender;
 
-  String musicRecommend(int age, String gender) {
+  Music({required this.age, required this.gender});
+
+  String musicRecommend() {
     if (age <= 25 && gender == "L") {
-      music_recommend = "HipHop";
+      return "HipHop";
     } else if (age > 25 && age <= 30 && gender == "L") {
-      music_recommend = "Jazz";
+      return "Jazz";
     } else if (age <= 25 && gender == "P") {
-      music_recommend = "Dance";
+      return "Dance";
     } else if (age > 25 && age <= 30 && gender == "P") {
-      music_recommend = "Accoustic";
+      return "Accoustic";
     } else {
-      music_recommend = "Classical";
+      return "Classical";
     }
-    return music_recommend;
   }
 }
 
-main() {
-  Music m = new Music();
-  print(m.musicRecommend(28, "P"));
+void main(List<String> args) {
+  Music music = Music(age: 28, gender: 'p');
+  print(music.musicRecommend());
 }

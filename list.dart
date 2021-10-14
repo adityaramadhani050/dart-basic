@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void listOfName() {
-  var names = new List(5);
+  var names;
   print("Sebutkan ${names.length} nama idola kamu");
   for (var i = 1; i <= names.length; i++) {
     stdout.write("$i. ");

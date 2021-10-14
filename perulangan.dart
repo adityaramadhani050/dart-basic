@@ -11,7 +11,7 @@ import 'dart:io';
 // PERULANGAN FOR
 void perulanganFor() {
   stdout.write("Jumlah Perulangan : ");
-  int n = int.parse(stdin.readLineSync());
+  int n = 10;
 
   for (int i = 1; i <= n; i++) {
     print("Perulangan ke-$i");
@@ -25,12 +25,13 @@ void perulanganWhile() {
 
   print("Selamat Datang di Permainan Tebak Angka");
   stdout.write("Mau Bermain? Y/N ");
-  var play = stdin.readLineSync().trim().toUpperCase();
+  var play = 'y';
   bool playing = (play == "Y") ? true : false;
 
   while (playing) {
     stdout.write("Tebak angka > ");
-    int tebakAngka = int.parse(stdin.readLineSync());
+    String? jawab = stdin.readLineSync();
+    int? tebakAngka = (jawab != null) ? int.tryParse(jawab);
     if (tebakAngka == angka) {
       print("Selamat Angka Tertebak : $angka");
       if (percobaan == 0) {
@@ -49,7 +50,7 @@ void perulanganDoWhile() {
   int i = 0;
   do {
     stdout.write("input? y/n: ");
-    String n = stdin.readLineSync();
+    String? n = stdin.readLineSync();
     if (n == "n") {
       print("Melakukan perulangan sebanyak $i");
       break;

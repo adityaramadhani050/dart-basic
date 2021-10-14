@@ -12,7 +12,7 @@ import 'dart:io';
 void programDiskon() {
   print("### Program Kasir ###");
   stdout.write("Total belanja: ");
-  int totalBelanja = int.parse(stdin.readLineSync());
+  int totalBelanja = 250000;
 
   if (totalBelanja >= 100000) {
     print("Selamat anda dapat hadiah!");
@@ -23,7 +23,7 @@ void programDiskon() {
 void login() {
   print("=== Login ===");
   stdout.write("Password: ");
-  String password = stdin.readLineSync().trim();
+  String password = "kopi";
 
   // cek password yang diinputkan
   if (password == "kopi") {
@@ -38,7 +38,7 @@ void grade() {
   print("*** Program Grade ***");
 
   stdout.write("Inputkan nilai: ");
-  int nilai = int.parse(stdin.readLineSync());
+  int nilai = 78;
 
   String grade;
 
@@ -68,7 +68,7 @@ void grade() {
 void quoteHarian() {
   print("~~~ Quote Harian ~~~");
   stdout.write("Input hari: ");
-  String hari = stdin.readLineSync().trim().toLowerCase();
+  String hari = "senin";
 
   String quote;
 
@@ -121,7 +121,7 @@ void quoteHarian() {
 void ternary() {
   print("apakah kamu suka aku?");
   stdout.write("jawab (y/t): ");
-  String jawab = stdin.readLineSync();
+  String jawab = "y";
 
   // menggunakan operator ternary sebagai ganti if/esle
   var hasil = (jawab == 'y') ? "menikah" : "jomblo lagi";
@@ -131,7 +131,7 @@ void ternary() {
 
 void ternaryBercabang() {
   stdout.write("Masukkan Angka: ");
-  int angka = int.parse(stdin.readLineSync());
+  int angka = 25;
   var status = (angka > 10)
       ? ((angka % 2 == 0) ? "bilangan genap" : "bilangan ganjil ")
       : "angka kurang dari 10";
