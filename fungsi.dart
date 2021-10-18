@@ -17,19 +17,33 @@ int namaFungsi(int param1, int param2){
 
 import 'dart:io';
 
-// membuat fungsi luas persegi
-int? luasPersegi(String? sisi) {
-  int? val = (sisi != null) ? int.tryParse(sisi) : null;
-  return (val != null) ? val * val : null;
-}
-
 main() {
   stdout.write("Input panjang sisi: ");
-  String? input = stdin.readLineSync();
+  int input = int.tryParse(stdin.readLineSync()!)!;
 
-  int? hasil = luasPersegi(input);
+  int hasil = luasPersegi(input);
 
   // memanggil fungsi
 
   print("Luas Persegi: $hasil");
+
+  myFunc('hello', (int num1, int num2) => num1 * num2);
+  Function calc = calculate(4);
+  calc();
+  calc();
+}
+
+// membuat fungsi luas persegi
+int luasPersegi(int sisi) {
+  return sisi * sisi;
+}
+
+void myFunc(String message, int Function(int num1, int num2) func) {
+  print(message);
+  print(func(3, 2));
+}
+
+Function calculate(int num) {
+  int count = num;
+  return () => print('$num - ${++count}');
 }
